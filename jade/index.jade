@@ -1,0 +1,33 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Sarah главная')
+
+    body
+        .wrapper
+            .rect_1024
+            .base
+                div.header
+                    .section_inner.clearfix
+                        .logo_block
+                            a.logo(href='#')
+                                img(src='i/logo.png')
+
+                    ul.main_menu
+                        li.menu_item
+                            a.menu_link.bg_color_white_mod(href='#')
+                                span.link_text О нас
+                        li.menu_item
+                            a.menu_link.bg_color_blue_mod(href='#')
+                                span.link_text ОТЗЫВЫ
+                        li.menu_item
+                            a.menu_link.bg_color_orange_mod(href='#')
+                                span.link_text ЛУЧШИЕ ПРЕДЛОЖЕНИЯ
+                        
+                                
+
+                div.main_content
+
+
+            .footer
+        +scripts()
