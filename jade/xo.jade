@@ -1,0 +1,29 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('XO 0')
+
+    body
+        .wrapper.wrapper--prod
+            .prod__holder
+                .prod__bg
+                .section__inner
+                    ul.prod__age
+                        li: span IV
+                        li: span V
+                        li.prod__age--active: span I
+                        li: span II
+                        li: span III
+                    .prod__name X.O
+                        
+                    .prod__image
+                        img(src='i/main-xo.png')
+                    
+                    .prod__controls
+                        a.prod__btn.prod__btn--prev(href='#')
+                        a.prod__btn.prod__btn--next(href='#')
+                        
+                        
+
+
+        //-+scripts()

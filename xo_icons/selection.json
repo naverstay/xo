@@ -1,0 +1,137 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M287.309 504.584l-8.001 7.429 466.554 433.242 13.798-14.86-458.552-425.813v14.86l458.579-425.837-13.798-14.86z"
+        ],
+        "attrs": [],
+        "width": 1039,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 16,
+        "tags": [
+          "arrow_prev"
+        ]
+      },
+      "attrs": [],
+      "properties": {
+        "order": 204,
+        "id": 1,
+        "name": "arrow_prev",
+        "prevSize": 32,
+        "code": 59649
+      },
+      "setIdx": 0,
+      "setId": 63,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M733.388 519.441v-14.859l-458.553 425.813 13.798 14.859 466.554-433.242-466.581-433.266-13.798 14.859z"
+        ],
+        "attrs": [],
+        "width": 1030,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 16,
+        "tags": [
+          "arrow_next"
+        ]
+      },
+      "attrs": [],
+      "properties": {
+        "order": 205,
+        "id": 0,
+        "name": "arrow_next",
+        "prevSize": 32,
+        "code": 59650
+      },
+      "setIdx": 0,
+      "setId": 63,
+      "iconIdx": 1
+    },
+    {
+      "icon": {
+        "paths": [
+          "M169.598 499.228l-84.695 89.399 272.233 287.358 604.961-638.572-84.695-89.399-520.266 549.17z"
+        ],
+        "attrs": [],
+        "width": 1047,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 16,
+        "tags": [
+          "check"
+        ],
+        "colorPermutations": {
+          "1911588912552552551": [
+            {
+              "f": 1
+            }
+          ]
+        }
+      },
+      "attrs": [],
+      "properties": {
+        "order": 201,
+        "id": 2,
+        "name": "check",
+        "prevSize": 32,
+        "code": 59648
+      },
+      "setIdx": 1,
+      "setId": 62,
+      "iconIdx": 0
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "xo_icons"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "i-",
+      "metadata": {
+        "fontFamily": "xo_icons",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false,
+      "noie8": false,
+      "ie7": false,
+      "cssVars": true,
+      "showSelector": true,
+      "selector": "",
+      "classSelector": ".icon",
+      "showMetrics": true,
+      "showMetadata": true,
+      "showVersion": true,
+      "resetPoint": 59648
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 4473924,
+      "bgColor": 16777215,
+      "classSelector": ".icon"
+    },
+    "historySize": 100,
+    "showCodes": false,
+    "gridSize": 16,
+    "showGrid": true,
+    "showLiga": true
+  }
+}

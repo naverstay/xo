@@ -24,28 +24,12 @@ module.exports = function (grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'styles/styles.css': 'sass/styles.scss',
+                    //'styles/styles.css': 'sass/styles.scss',
                     'styles/main_global.css': 'sass/main_global.scss'
                 }
             }
         },
         pug: {
-            //debug: {
-            //    options: {
-            //        data: {
-            //            client: false,
-            //            debug: true,
-            //            pretty: true
-            //        }
-            //    },
-            //    files: [{
-            //        cwd: "jade/",
-            //        src: "*.jade",
-            //        dest: "",
-            //        expand: true,
-            //        ext: ".html"
-            //    }]
-            //},
             release: {
                 options: {
                     data: {
