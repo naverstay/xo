@@ -28,7 +28,8 @@ body {
 .wrapper {
   position: relative;
   min-height: 100%;
-
+  overflow: hidden;
+  
   &--start {
     background: #000;
   }  
@@ -60,8 +61,17 @@ body {
 .section__inner {
   width: 100%;
   max-width: $content-max-w;
+  //padding: 0 25px;
   margin: 0 auto;
-  position: relative;
+}
+
+.hidden__inp {
+  display: none;
+}
+
+.mb {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @import "all_styles";

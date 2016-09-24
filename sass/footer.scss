@@ -1,20 +1,76 @@
 .footer {
-  padding-top: 10px;
-  line-height: 100px;
-  background: #686151;
-  border-bottom: 2px solid #fff;
+  background: #000;
+  padding: 75px 0 25px;
 
-  .section_inner {
-    padding: 0 25px;
+  @include respond-to-min($resp_step_2) {
+    border-top: 1px solid #ccc;
+    padding: 25px 0;
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    &--age {
+      color: #bf9e59;
+      font: 28px/36px $CormorantRegular;
+    }
+
+    &--name {
+      color: #fff;
+      font: 16px/20px $CormorantRegular;
+    }
+
+    &--tip {
+      color: #fff;
+      font: 8px/10px $CormorantLight;
+      letter-spacing: .65px;
+    }
+
+    &--btn {
+      position: absolute;
+      bottom: 0;
+      width: 50%;
+      min-height: 140px;
+    }
+
+    &--prev {
+      left: 0;
+      text-align: left;
+      padding-left: 55px;
+
+      .footer__nav--img {
+        left: 0;
+      }
+    }
+
+    &--next {
+      right: 0;
+      text-align: right;
+      padding-right: 55px;
+
+      .footer__nav--img {
+        right: 0;
+      }
+    }
+
+    &--img {
+      position: absolute;
+      bottom: 0;
+
+      img {
+        display: block;
+      }
+    }
   }
 }
 
-.popup {
-  background: #f4f4f4;
-  padding: 0 20px 20px;
+.copyright {
   text-align: center;
-  
-  p {
-    margin-bottom: 20px;
-  }
+  color: rgba(255, 255, 255, .59);
+  font: 12px $GothamProLight;
 }
+
+

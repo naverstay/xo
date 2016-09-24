@@ -16,14 +16,141 @@ html(lang='ru')
                         li: span III
                     .prod__name X.O
                         
-                    .prod__image
-                        img(src='i/main-xo.png')
+                    .prod__picture
+                        img.reflectMe.prod__image(src='i/main-xo.png')
                     
                     .prod__controls
                         a.prod__btn.prod__btn--prev(href='#')
                         a.prod__btn.prod__btn--next(href='#')
                         
+            .section__inner
+                .prod__info
+                    .prod__info--price
+                        .prod__price
+                            span.prod__price--old 15 115 ₽
+                            | &nbsp; 
+                            span.prod__price--new 10 580 ₽
                         
+                        .prod__gift
+                            label.check__emul--v1
+                                input.hidden__inp(type='checkbox')
+                                span.check__emul--text
+                            
+                            span.mb.text--left
+                                a.link--inner(href='#') С подарочной упаковкой
+                                |  <br> 
+                                span и двумя бокалами
+                        
+                        .order__form
+                            form(action='#')
+                                .order__form--caption ДОБАВИТЬ В ЗАКАЗ
+                                .order__form--row.mob--hidden
+                                    .order__form--cell
+                                        .order__name X.O.
+                                    .order__form--cell
+                                        .order__quantity
+                                            span.val 1
+                                            .val__btn.minus &ndash;
+                                            .val__btn.plus +
+                                                
+                                .order__form--row.mob--hidden
+                                    .order__form--cell
+                                        .order__name Paradis
+                                    .order__form--cell
+                                        .order__quantity
+                                            span.val 1
+                                            .val__btn.minus &ndash;
+                                            .val__btn.plus +
+                                                
+                                .order__form--row.mob--hidden
+                                    .order__form--cell
+                                        .order__name Richard
+                                    .order__form--cell
+                                        .order__quantity
+                                            span.val 1
+                                            .val__btn.minus &ndash;
+                                            .val__btn.plus +
+                                                
+                                .order__form--total.mob--hidden
+                                    .order__form--cell
+                                        .order__total Итого
+                                    .order__form--cell 249 372 ₽
+                                        
+                                button.order__form--btn.btn--v1.mob--hidden ОФОРМИТЬ
 
+                    .prod__info--desription.mob--hidden
+                        h3 Рождение легенды
+                        p Создан в 1870 году Морисом Хеннесси для своих друзей,  как первый коньяк с указанием возраста eXtra Оld cognac на лицевой этикетке бутылки. В ассамбляж входит более 100 коньячных спиртов, возрастом от 20 до 30 лет. В 1947 году для коньяка была создана специальная бутылка, украшенная орнаментом из виноградной лозы.
+                        
+                        h3 Аромат
+                        p Купаж получен из вин земель  Гран Шампань (Grande Champagne), Пти Шампань (Petite Champagne), Бордери (Borderies) и Фин Буа (Fin Bois). Обладает богатым и устойчивым вкусом, ароматом спелых фруктов — грушы, персика, сливы, а также душистых пряностей — ванили и корицы, что придаёт напитку своеобразный вкус.
+                        p
+                            a.link--inner.link--collapse(href='#') Скрыть историю
 
-        //-+scripts()
+            .prod__slider--w
+                .section__inner
+                    .prod__logo
+                        img(src='i/logo_bw.svg')
+
+                    .dt--hidden
+                        .prod__slider
+                            .prod__slider--img
+                                .prod__title
+                                    span THE ORIGINAL X.O
+                                .prod__tip Created by Maurice Hennessy in 1870 for his circle of friends, X.O was born at a turning point in history and introduced a new style of cognac: bold, rich and complex.
+    
+                            .prod__slider--controls
+                                a.prod__btn.prod__btn--prev(href='#')
+                                a.prod__btn.prod__btn--next(href='#')
+                                
+                        ul.prod__slider--pagination
+                            li
+                            li
+                            li.active
+                            li
+                        
+                    .prod__slider
+                        .prod__slider--img
+                            img.mob--hidden(src='i/slide_xo.png')
+                            img.dt--hidden(src='i/slide_xo_m.png')
+
+                        .prod__slider--controls
+                            a.prod__btn.prod__btn--prev(href='#')
+                            a.prod__btn.prod__btn--next(href='#')
+                    
+                    ul.prod__slider--pagination
+                        li
+                        li
+                        li.active
+                            
+                    .text--center
+                        a.link--inner.link--goback(href='#') Вернуться в начало
+                    
+                    .prod__title
+                        span Каждая капля Hennessy X.O <br> – это целое путешествие
+                        
+                    .prod__tip Hennessy представляет новую рекламную кампанию, <br> основанную на фильме-путешествии <br> Николаса Виндинга Рефна.
+                        
+                    .prod__video
+                        img(src='i/video.jpg')
+
+            .footer
+                .footer__nav.dt--hidden
+                    a.footer__nav--btn.footer__nav--prev(href='#')
+                        .footer__nav--img
+                            img(src='i/footer_nav_1.png')
+                        .footer__nav--age V 
+                        .footer__nav--name RICHARD
+                    
+                    a.footer__nav--btn.footer__nav--next(href='#')
+                        .footer__nav--img
+                            img(src='i/footer_nav_2.png')
+                        .footer__nav--age II
+                        .footer__nav--name X.O
+                        .footer__nav--tip LIMITED EDITION <br> FROM TOM DIXON
+                            
+                            
+                .section__inner
+                    .copyright ©2016 Hennessy
+
+        +scripts()
