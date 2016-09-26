@@ -24,5 +24,19 @@ $(function ($) {
 
         return false;
     });
+
+    $('.collapseFormBtn').on ('click', function () {
+
+        $('.collapseForm').slideToggle();
+
+        return false;
+    });
+
+    $('.historyCollapseBtn').on ('click', function () {
+
+        $(this).closest('.historyCollapseBlock').addClass('history--opened');
+
+        return false;
+    });
     
 });

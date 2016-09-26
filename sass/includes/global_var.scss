@@ -14,6 +14,7 @@ $GothamProMedium: 'GothamProMedium', sans-serif;
 
 $CormorantBold: 'CormorantBold', sans-serif;
 $CormorantBoldItalic: 'CormorantBoldItalic', sans-serif;
+$CormorantItalic: 'CormorantItalic', sans-serif;
 $CormorantLight: 'CormorantLight', sans-serif;
 $CormorantRegular: 'CormorantRegular', sans-serif;
 
@@ -168,6 +169,12 @@ $placeholder_color: #ccc;
 
 @mixin respond-to-max($custom) {
   @media only screen and (max-width: $custom - 1) {
+    @content;
+  }
+}
+
+@mixin respond-to-max-h($custom) {
+  @media only screen and (max-height: $custom - 1) {
     @content;
   }
 }

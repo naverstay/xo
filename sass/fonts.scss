@@ -54,6 +54,17 @@
 }
 
 @font-face {
+  font-family: 'CormorantItalic';
+  src: url(../fonts/Cormorant-Italic.eot);
+  src: url(../fonts/Cormorant-Italic.eot?#iefix) format("embedded-opentype"),
+  url(../fonts/Cormorant-Italic.woff) format("woff"),
+  url(../fonts/Cormorant-Italic.ttf) format("truetype"),
+  url(../fonts/Cormorant-Italic.svg) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'GothamProLight';
   src: url(../fonts/GothamPro-Light.eot);
   src: url(../fonts/GothamPro-Light.eot?#iefix) format("embedded-opentype"),

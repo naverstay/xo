@@ -1,7 +1,7 @@
 include mixins.pug
 doctype html
 html(lang='ru')
-    +dev_head('XO')
+    +dev_head('XO Ltd')
 
     body
         .wrapper.wrapper--prod
@@ -14,7 +14,12 @@ html(lang='ru')
                         li.prod__age--active: span I
                         li: span II
                         li: span III
-                    .prod__name X.O
+                    .mob--hidden
+                        .prod__name X.O LIMITED EDITION
+                            .prod__name--edition From Tom Dixon
+                    .dt--hidden
+                        .prod__name X.O
+                            .prod__name--edition Limited Edition From Tom Dixon
                         
                     .prod__picture
                         img.reflectMe.prod__image(src='i/main-xo.png')
@@ -140,7 +145,7 @@ html(lang='ru')
 
             .footer
                 .footer__nav.dt--hidden
-                    a.footer__nav--btn.footer__nav--prev(href='#')
+                    a.footer__nav--btn.footer__nav--prev(href='xo.html')
                         .footer__nav--img
                             img(src='i/footer_nav_1.png')
                         .footer__nav--age V 

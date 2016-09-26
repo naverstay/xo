@@ -23,8 +23,14 @@
       width: 120px;
       top: 120px;
     }
-  }
 
+    @include respond-to-max-h(600px) {
+      top: 45px;
+      left: 50%;
+      width: 98px;
+      margin-left: -48px;
+    }
+  }
 }
 
 .form {
@@ -180,7 +186,7 @@
       z-index: 1;
       content: '';
       position: absolute;
-      bottom: 95px;
+      bottom: 75px;
       width: 0;
       height: 0;
       border-left: 5500px solid transparent;
@@ -200,6 +206,13 @@
       z-index: 2;
       position: relative;
     }
+
+    @include respond-to-min($resp_step_2) {
+      &:after,
+      &:before {
+        bottom: 95px;
+      }
+    }
   }
 
   &__bg {
@@ -216,7 +229,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 95px;
+      height: 75px;
       background: #fff;
     }
 
@@ -238,6 +251,12 @@
 
       /* Mask: */
       //background-image: radial-gradient(50% 205%, #931403 100%, #000 100%);
+    }
+
+    @include respond-to-min($resp_step_2) {
+      &:after {
+        height: 95px;
+      }
     }
   }
 
@@ -264,6 +283,7 @@
     bottom: 50%;
     width: 50px;
     height: 50px;
+    margin-bottom: -15px;
     pointer-events: all;
     
     &:before {
@@ -272,7 +292,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      font-size: 18px;
+      font-size: 30px;
       line-height: 50px;
       text-align: center;
       color: #bf9e59;
@@ -306,7 +326,7 @@
   &__age {
     @extend %clearfix;
     text-align: center;
-    margin: 0 auto 15px;
+    margin: 0 auto 23px;
     max-width: 290px;
 
     > li {
@@ -335,7 +355,7 @@
   &__name {
     color: #fff;
     font: 40px/1 $CormorantBold;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     letter-spacing: 4px;
 
     @include respond-to-min($resp_step_2) {
@@ -347,7 +367,7 @@
     position: relative;
     z-index: 1;
     max-width: 100%;
-    padding: 0 80px;
+    padding: 0 85px;
 
     img {
       display: block;
@@ -420,12 +440,13 @@
 
     &--w {
       background: #030204;
-      padding: 50px 0;
+      padding: 45px 0 1px;
       margin-top: 70px;
       position: relative;
 
       @include respond-to-min($resp_step_2) {
         margin-top: 115px;
+        padding: 50px 0;
       }
     }
 
@@ -465,6 +486,7 @@
     }
 
     &--desription {
+      color: rgba(0, 0, 0, .7);
 
       h3 {
         font: 28px $CormorantBold;
@@ -493,13 +515,14 @@
   &__price {
     text-align: center;
     line-height: 30px;
-    margin-top: -30px;
+    margin-top: -20px;
     margin-bottom: 25px;
 
     &--old {
       position: relative;
       color: rgba(0, 0, 0, .6);
       font-size: 18px;
+      line-height: 1;
       display: inline-block;
       vertical-align: middle;
       margin-bottom: 5px;
@@ -528,12 +551,14 @@
         display: inline-block;
         vertical-align: middle;
         font-size: 25px;
+        line-height: 1;
       }
     }
 
     @include respond-to-min($resp_step_2) {
       margin-top: 0;
       margin-bottom: 20px;
+      line-height: 38px;
     }
   }
 
@@ -545,7 +570,7 @@
     @include respond-to-min($resp_step_2) {
       line-height: 22px;
       font-size: 16px;
-      margin-bottom: 30px;
+      margin-bottom: 27px;
     }
   }
 
@@ -557,36 +582,49 @@
     > span {
       display: inline-block;
       position: relative;
-      font: 26px/1.35 $CormorantBold;
-      text-transform: uppercase;
+      font: 28px/1.35 $CormorantBold;
 
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        border-top: 1px solid #424142;
+      }
+
+      &:before {
+        right: 100%;
+        margin-right: 25px;
+      }
+
+      &:after {
+        left: 100%;
+        margin-left: 25px;
+      }
+      
       @include respond-to-min($resp_step_2) {
         font: 42px/1.05 $CormorantBoldItalic;
         text-transform: none;
-
-        &:before,
-        &:after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          width: 100%;
-          border-top: 1px solid #424142;
-        }
-
-        &:before {
-          right: 100%;
-          margin-right: 25px;
-        }
-
-        &:after {
-          left: 100%;
-          margin-left: 25px;
-        }
       }
     }
 
+    @include respond-to-max($resp_step_2) {
+      &.mob--it {
+        margin-top: 35px;
+
+        > span {
+          font: 26px/1.25 $CormorantBoldItalic;
+        }
+      }
+    }
+    
     @include respond-to-min($resp_step_2) {
       margin: 60px 0 28px;
+
+      > span {
+        //text-transform: uppercase;
+      }
     }
 
     .prod__slider & {
@@ -617,6 +655,45 @@
     }
   }
 
+  &__history {
+    position: relative;
+    font-size: 20px;
+    line-height: 26px;
+
+    .prod__tip {
+      max-height: 11.7em;
+      overflow: hidden;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 70%;
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
+      }
+    }
+
+    &.history--opened {
+
+      .prod__history--controls {
+        display: none;
+      }
+
+      .prod__tip {
+        max-height: none;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }  
 }
 
 .check__emul {
@@ -659,7 +736,7 @@
 .link {
   &--inner {
     text-decoration: none;
-    color: #000;
+    color: rgba(0, 0, 0, .74);
     border-bottom: 1px dashed rgba(191, 158, 89, .4);
 
     &:hover {
@@ -669,7 +746,11 @@
 
   &--goback {
     color: #bf9e59;
-    font-size: 16px;
+    font-size: 14px;
+
+    @include respond-to-min($resp_step_2) {
+      font-size: 16px;
+    }
   }
 
   &--collapse {
@@ -678,28 +759,65 @@
   }
 }
 
+.collapseForm {
+  display: none;
+
+  @include respond-to-min($resp_step_2) {
+    display: block !important;
+    height: 100% !important;
+  }
+}
+
 .order__form {
   border: 1px solid #d1d1d1;
   max-width: 266px;
   margin: 0 auto 50px;
   position: relative;
-  padding: 23px 10px 0;
+  padding-top: 23px;
+  //padding: 23px 10px 0;
 
   @include respond-to-min($resp_step_2) {
-    padding: 20px 52px 80px;
+    padding-top: 20px;
+    //padding: 20px 52px 0;
     max-width: 340px;
   }
 
+  &--inner {
+    position: relative;
+    padding: 10px 10px 80px;
+
+    @include respond-to-min($resp_step_2) {
+      padding: 10px 52px 80px;
+      max-width: 340px;
+    }
+  }
+  
   &--caption {
     text-align: center;
     font-size: 15px;
     letter-spacing: 1.13px;
-    margin-bottom: 23px;
+    padding-bottom: 20px;
+    position: relative;
 
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: 10px;
+      left: 10px;
+      height: 1px;
+      background: #d1d1d1;
+    }
+    
     @include respond-to-min($resp_step_2) {
-      border-bottom: 1px solid #d1d1d1;
       padding-bottom: 23px;
+      //margin-bottom: 23px;
       font-size: 17px;
+
+      &:before {
+        right: 55px;
+        left: 55px;
+      }
     }
   }
 
@@ -758,6 +876,7 @@
   bottom: 0;
   width: 15px;
   color: #bf9e59;
+  text-align: center;
   font: 16px/20px $GothamProMedium;
 
   &.minus {

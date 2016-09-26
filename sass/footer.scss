@@ -1,10 +1,12 @@
 .footer {
   background: #000;
-  padding: 75px 0 25px;
-
+  padding: 75px 0 0;
+  min-height: 110px;
+  
   @include respond-to-min($resp_step_2) {
     border-top: 1px solid #ccc;
     padding: 25px 0;
+    min-height: 0;
   }
 
   &__nav {
@@ -33,7 +35,7 @@
       position: absolute;
       bottom: 0;
       width: 50%;
-      min-height: 140px;
+      min-height: 120px;
     }
 
     &--prev {
@@ -69,8 +71,15 @@
 
 .copyright {
   text-align: center;
-  color: rgba(255, 255, 255, .59);
-  font: 12px $GothamProLight;
+  color: #fff;
+  opacity: .59;
+  font: 9px $GothamProLight;
+  margin-top: 15px;
+
+  @include respond-to-min($resp_step_2) {
+    font-size: 12px;
+    margin-top: 0;
+  }
 }
 
 
