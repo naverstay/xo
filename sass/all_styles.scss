@@ -193,6 +193,10 @@
       @include respond-to-min($resp_step_2) {
         margin-bottom: 0;
       }
+
+      @include respond-to-max-h(600px) {
+        margin-bottom: 0;
+      }
     }
   }
 
