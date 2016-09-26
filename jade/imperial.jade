@@ -30,7 +30,7 @@ html(lang='ru')
                 .prod__info
                     .prod__info--price
                         .prod__price
-                            span.prod__price--old 15 115 ₽
+                            span.prod__price--old: span 15 115 ₽
                             | &nbsp; 
                             span.prod__price--new 10 580 ₽
                         
@@ -137,18 +137,18 @@ html(lang='ru')
                         li
                         li.active
                             
-                    .text--center
+                    .text--center.goback__block
                         a.link--inner.link--goback(href='#') Вернуться наверх
                         
             .footer
                 .footer__nav.dt--hidden
-                    a.footer__nav--btn.footer__nav--prev(href='#')
+                    a.footer__nav--btn.footer__nav--prev.footer__nav--imperial(href='#')
                         .footer__nav--img
                             img(src='i/footer_nav_1.png')
                         .footer__nav--age V 
                         .footer__nav--name RICHARD
                     
-                    a.footer__nav--btn.footer__nav--next(href='xo-ltd.html')
+                    a.footer__nav--btn.footer__nav--next.footer__nav--richard(href='xo-ltd.html')
                         .footer__nav--img
                             img(src='i/footer_nav_2.png')
                         .footer__nav--age II

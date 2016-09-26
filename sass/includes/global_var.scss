@@ -39,7 +39,7 @@ $cross_font_TimesNewRoman: 'Times New Roman', 'Times CY', 'Nimbus Roman No9 L', 
 $cross_font_TrebuchetMS: 'Trebuchet MS', 'Helvetica CY', sans-serif;
 $cross_font_Verdana: Verdana, 'Geneva CY', 'DejaVu Sans', sans-serif;
 
-$default_t_color: #7f7f7f;
+$default_t_color: rgba(0, 0, 0, .74);
 $placeholder_color: #B0B8BD;
 
 @mixin opacity($val : 1, $important : 0) {

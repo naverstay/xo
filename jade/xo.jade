@@ -27,7 +27,7 @@ html(lang='ru')
                 .prod__info
                     .prod__info--price
                         .prod__price
-                            span.prod__price--old 15 115 ₽
+                            span.prod__price--old: span 15 115 ₽
                             | &nbsp; 
                             span.prod__price--new 10 580 ₽
                         
@@ -101,7 +101,7 @@ html(lang='ru')
                         .prod__slider
                             .prod__slider--img.prod__history.historyCollapseBlock
                                 .prod__title
-                                    span Рождение легенды
+                                    span.no--lines Рождение легенды
                                 .prod__tip Создан в 1870 году Морисом Хеннесси для своих друзей, как первый коньяк с указанием возраста eXtra Оld cognac на лицевой этикетке бутылки. В ассамбляж входит более 100 коньячных спиртов, возрастом от 20 до 30 лет. В 1947 году для коньяка была создана специальная бутылка, украшенная орнаментом из виноградной лозы.
     
                                 .text--center
@@ -133,26 +133,42 @@ html(lang='ru')
                         li
                         li.active
                             
-                    .text--center
+                    .text--center.goback__block
                         a.link--inner.link--goback(href='#') Вернуться наверх
                     
                     .prod__title.mob--it
-                        span Каждая капля Hennessy X.O <br> – это целое путешествие
+                        span 
+                            span Каждая капля 
+                            span.dt--hidden  <br> 
+                            span Hennessy X.O  
+                            span.mob--hidden <br> 
+                            span – это целое 
+                            span.dt--hidden  <br> 
+                            span путешествие
                         
-                    .prod__tip Hennessy представляет новую рекламную кампанию, <br> основанную на фильме-путешествии <br> Николаса Виндинга Рефна.
+                    .prod__tip 
+                        span Hennessy представляет 
+                        span.dt--hidden  <br> 
+                        span новую рекламную кампанию, <br> основанную на фильме-
+                        span.dt--hidden  <br> 
+                        span путешествии 
+                        span.mob--hidden <br> 
+                        span Николаса 
+                        span.dt--hidden  <br> 
+                        span Виндинга Рефна.
                         
                     .prod__video
-                        img(src='i/video.jpg')
+                        img(src='i/video_2.jpg')
 
             .footer
                 .footer__nav.dt--hidden
-                    a.footer__nav--btn.footer__nav--prev(href='#')
+                    a.footer__nav--btn.footer__nav--prev.footer__nav--xo(href='#')
                         .footer__nav--img
                             img(src='i/footer_nav_1.png')
                         .footer__nav--age V 
                         .footer__nav--name RICHARD
                     
-                    a.footer__nav--btn.footer__nav--next(href='xo-ltd.html')
+                    a.footer__nav--btn.footer__nav--next.footer__nav--xo__ltd(href='xo-ltd.html')
                         .footer__nav--img
                             img(src='i/footer_nav_2.png')
                         .footer__nav--age II

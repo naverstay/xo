@@ -1,0 +1,30 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('XO 0')
+
+    body
+        .wrapper.wrapper--start
+            .abs__holder
+                .gl__table
+                    .gl__table--cell
+                        .section__inner
+                            .text--center 
+                                a.logo.logo--code(href='xo.html')
+                                    img(src='i/logo.png')
+
+                                .form__w--code
+                                    form(action='#')
+                                        .form__cell
+                                            .form__label.form__label--v2 Вам больше 18?
+                                        .form__row--w
+                                            .form__row.form__row--v1.form__input--error
+                                                .form__cell
+                                                    a.form__btn--gold.form__btn--v1(href='#') ДА
+                                                .form__cell
+                                                    a.form__btn--gold-b.form__btn--v1(href='#') НЕТ
+                                            .form__input--error
+                                                .form__input--error__text Чтобы попасть на сайт,<br> вам должно быть больше 18 лет
+                                                    
+
+        //-+scripts()

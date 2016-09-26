@@ -51,9 +51,30 @@
     &--tip {
       color: #9b9b9b;
       font: 12px/14px $GothamProLight;
-      margin: 13px 0;
+      margin: 15px 0;
     }
 
+    &--error {
+
+      .form__input--error__text {
+        display: block;
+      }
+
+      .form__inp {
+        border-color: #d0021b;
+      }
+
+      &__text {
+        display: none;
+        color: #d0021b;
+        font-size: 16px;
+        margin: 15px 0;
+        
+        .prod__order--inner & {
+          font-size: 12px;
+        }
+      }
+    }
   }
   
   &__row {
@@ -61,22 +82,22 @@
 
     &--w {
       .form__w--code & {
-        display: inline-block;
-        vertical-align: top;
-        width: 220px;
+        //display: inline-block;
+        //vertical-align: top;
+        //width: 260px;
       }
     }
 
     &--v1 {
-      margin-left: -40px;
-
+      margin: 0 auto;
+      width: 260px;
+      
       .form__cell {
         float: left;
         width: 50%;
-        padding-left: 40px;
+        padding: 0 20px;
       }
     }
-
   }
 
   &__cell {
@@ -155,7 +176,7 @@
     &--v3 {
       color: #bf9e59;
       font-size: 12px;
-      margin-bottom: 4px;
+      margin-bottom: 10px;
     }
   }
 
@@ -167,7 +188,6 @@
       .form__inp--v1 {
         width: 220px;
         margin: 0 auto;
-        border-radius: 0;
       }
 
       @include respond-to-min($resp_step_2) {
@@ -179,6 +199,7 @@
   &__inp {
     display: block;
     width: 100%;
+    border-radius: 0;
 
     &--v1 {
       color: #b0b8bd;
@@ -195,11 +216,15 @@
     &--v2 {
       color: rgba(0, 0, 0, .74);
       font: 16px $GothamPro;
-      padding: 5px 0;
+      //padding: 3px 0;
       border-bottom: 1px solid #b0b8bd;
 
       &:focus {
         border-color: #bf9e59;
+      }
+
+      @include respond-to-min($resp_step_2) {
+        padding: 1px 0;
       }
     }
 
@@ -421,7 +446,7 @@
         color: #bf9e59;
         text-decoration: none;
         letter-spacing: 1px;
-        padding: 0 40px;
+        padding: 0 17px;
         font: 22px/36px $CormorantRegular;
       }
 
@@ -437,6 +462,12 @@
     @include respond-to-min($resp_step_2) {
       //max-width: 490px;
       margin-bottom: 25px;
+
+      > li {
+        a {
+          padding: 0 40px;
+        }
+      }
     }
   }
 
@@ -489,7 +520,7 @@
 
     &--pagination {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 13px;
       opacity: .75;
 
       li {
@@ -530,6 +561,14 @@
       .prod__btn {
         bottom: 50%;
         margin-bottom: -20px;
+
+        &:before {
+          font-size: 18px;
+
+          @include respond-to-min($resp_step_2) {
+            font-size: 44px;
+          }
+        }
       }
     }
 
@@ -543,13 +582,13 @@
 
     &--w {
       background: #030204;
-      padding: 45px 0;
+      padding: 45px 0 1px;
       margin-top: 70px;
       position: relative;
 
       @include respond-to-min($resp_step_2) {
         margin-top: 115px;
-        padding: 50px 0;
+        padding: 50px 0 35px;
       }
     }
 
@@ -651,13 +690,16 @@
 
     &--old {
       position: relative;
-      color: rgba(0, 0, 0, .6);
       font-size: 18px;
       line-height: 1;
       display: inline-block;
       vertical-align: middle;
       margin-bottom: 5px;
 
+      span {
+        opacity: .6;
+      }
+      
       &:before {
         content: '';
         position: absolute;
@@ -720,6 +762,7 @@
       display: inline-block;
       position: relative;
       font: 28px/1.35 $CormorantBold;
+      max-width: 80%;
 
       &:before,
       &:after {
@@ -732,23 +775,39 @@
 
       &:before {
         right: 100%;
-        margin-right: 25px;
+        margin-right: 12px;
       }
 
       &:after {
         left: 100%;
-        margin-left: 25px;
+        margin-left: 12px;
+      }
+
+      &.no--lines {
+        &:before,
+        &:after {
+          display: none;
+        }
       }
       
       @include respond-to-min($resp_step_2) {
         font: 42px/1.05 $CormorantBoldItalic;
         text-transform: none;
+        max-width: none;
+
+        &:before {
+          margin-right: 25px;
+        }
+
+        &:after {
+          margin-left: 25px;
+        }
       }
     }
 
     @include respond-to-max($resp_step_2) {
       &.mob--it {
-        margin-top: 35px;
+        margin-top: 45px;
 
         > span {
           font: 26px/1.25 $CormorantBoldItalic;
@@ -784,11 +843,18 @@
   &__video {
     width: 100%;
     max-width: 662px;
-    margin: 25px auto 30px;
+    margin: 25px auto 0;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    //border-width: 1px 0;
 
     img {
       display: block;
       max-width: 100%;
+    }
+
+    @include respond-to-min($resp_step_2) {
+      border: 0;
+      margin-bottom: 45px;
     }
   }
 
@@ -851,7 +917,6 @@
         vertical-align: top;
         max-width: 100%;
       }
-
     }
 
     &--caption {
@@ -866,11 +931,12 @@
     }
 
     &--inner {
-      padding: 26px 20px 28px;
-      border: 7px solid rgba(176, 184, 189, .2);
+      padding: 26px 22px 28px;
+      border: 5px solid rgba(176, 184, 189, .2);
 
       @include respond-to-min($resp_step_2) {
         padding: 23px 43px 28px;
+        border-width: 7px;
       }
 
       .form__cell {
@@ -879,13 +945,14 @@
     }
 
     &--thanks {
-      padding: 42px 13px 35px;
-      border: 7px solid #bf9e59;
+      padding: 42px 15px 35px;
+      border: 5px solid #bf9e59;
       text-align: center;
       color: #000;
 
       @include respond-to-min($resp_step_2) {
         padding: 42px 43px 35px;
+        border-width: 7px;
       }
 
       &__caption {
@@ -910,7 +977,7 @@
     }
 
     &--controls {
-      margin-top: -30px;
+      margin-top: -33px;
       margin-bottom: 30px;
       padding: 0 16px;
       text-align: center;
@@ -954,7 +1021,20 @@
         max-width: 60%;
       }
     }
+
+    &--footer {
+      text-align: center;
+      padding: 24px 0;
+
+      .copyright {
+        color: rgba(0, 0, 0, .74);
+      }
+    }
   }
+}
+
+.goback__block {
+  margin-bottom: 45px;
 }
 
 .check__emul {
@@ -1069,10 +1149,16 @@
 
   p {
     margin-top: 11px;
+    font-family: $GothamProLight;
   }
 
-  .mb {
+  .prod__gift .mb {
     line-height: 1.2;
+    max-width: 180px;
+
+    @include respond-to-min($resp_step_2) {
+      max-width: 200px;
+    }
   }
 
   p, a, span {

@@ -1,7 +1,7 @@
 include mixins.pug
 doctype html
 html(lang='ru')
-    +dev_head('XO form')
+    +dev_head('XO form error')
 
     body
         .wrapper.wrapper--prod
@@ -21,16 +21,18 @@ html(lang='ru')
                                 .form__input--tip В магазине менеджер спросит имя и фамилию, чтобы отдать заказ 
                             .form__cell
                                 label.form__label.form__label--v3(for='order_phone') Контактный телефон
-                                .form__input--w
+                                .form__input--w.form__input--error
                                     input#order_phone.form__inp.form__inp--v2(placeholder='+7 999 99 99' value='+7 923 311 31 11')
-                                    
+                                    .form__input--error__text Кажется, тут не хватает цифр
+
                                 .form__input--tip По этому номеру позвонит менеджер, чтобы подтвердить заказ
                                     
                             .form__cell
                                 label.form__label.form__label--v3(for='order_email') Эл. почта
-                                .form__input--w
+                                .form__input--w.form__input--error
                                     input#order_email.form__inp.form__inp--v2(placeholder='example@mail.ru' value='konstantin.konstantinopolsy@')
-                                    
+                                    .form__input--error__text Проверьте, нет ли ошибок
+
                                 .form__input--tip На эту почту отправим письмо с деталями заказа
                                     
                             .moreBlock.more__info.more__info--v1

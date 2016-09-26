@@ -1,0 +1,26 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('XO 0')
+
+    body
+        .wrapper.wrapper--start
+            .abs__holder
+                .gl__table
+                    .gl__table--cell
+                        .section__inner
+                            .text--center 
+                                a.logo.logo--code(href='age.html')
+                                    img(src='i/logo.png')
+                                
+                                .form__w--code
+                                    form(action='#')
+                                        .form__cell
+                                            label.form__label.form__label--v1(for='code') Введите код
+                                            .form__input--error.form__input--w
+                                                input#code.form__inp.form__inp--v1(value='000-000-000')
+                                                .form__input--error__text Проверьте, нет ли ошибок
+                                                
+
+
+        //-+scripts()

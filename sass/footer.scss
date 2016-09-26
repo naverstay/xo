@@ -1,7 +1,7 @@
 .footer {
   background: #000;
-  padding: 75px 0 0;
-  min-height: 110px;
+  padding: 105px 0 0;
+  min-height: 140px;
   
   @include respond-to-min($resp_step_2) {
     border-top: 1px solid rgba(255, 255, 255, .2);
@@ -16,16 +16,22 @@
     left: 0;
 
     &--age {
+      position: relative;
+      z-index: 2;
       color: #bf9e59;
       font: 28px/36px $CormorantRegular;
     }
 
     &--name {
+      position: relative;
+      z-index: 2;
       color: #fff;
       font: 16px/20px $CormorantRegular;
     }
 
     &--tip {
+      position: relative;
+      z-index: 2;
       color: #fff;
       font: 8px/10px $CormorantLight;
       letter-spacing: .65px;
@@ -36,11 +42,70 @@
       bottom: 0;
       width: 50%;
       min-height: 140px;
-      padding-top: 20px;
+      padding-top: 24px;
       border-top: 1px solid rgba(255, 255, 255, .2);
 
       &:first-child {
-        border-right: 1px solid rgba(255, 255, 255, .2);
+        //border-right: 1px solid rgba(255, 255, 255, .2);
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 160px;
+        height: 160px;
+        bottom: -70px;
+      }
+    }
+
+    &--xo {
+      &:before {
+        /* Mask: */
+        background: #931403;
+        background: -moz-radial-gradient(center, ellipse cover, #931403 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #931403 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #931403 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#931403', endColorstr='#000000', GradientType=1);
+      }
+    }
+
+    &--xo__ltd {
+      &:before {
+        background: #e5e5e5;
+        background: -moz-radial-gradient(center, ellipse cover, #e5e5e5 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #e5e5e5 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #e5e5e5 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#000000', GradientType=1);
+      }
+    }
+
+    &--paradis {
+      &:before {
+        background: #a8041b;
+        background: -moz-radial-gradient(center, ellipse cover, #a8041b 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #a8041b 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #a8041b 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8041b', endColorstr='#000000', GradientType=1);
+      }
+    }
+
+    &--imperial {
+      &:before {
+        background: #e85100;
+        background: -moz-radial-gradient(center, ellipse cover, #e85100 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #e85100 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #e85100 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e85100', endColorstr='#000000', GradientType=1);
+      }
+    }
+
+    &--richard {
+      &:before {
+        background: #d93006;
+        background: -moz-radial-gradient(center, ellipse cover, #d93006 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #d93006 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #d93006 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d93006', endColorstr='#000000', GradientType=1);
       }
     }
 
@@ -49,6 +114,10 @@
       text-align: left;
       padding-left: 55px;
 
+      &:before {
+        left: -70px;
+      }
+      
       .footer__nav--img {
         left: 0;
       }
@@ -59,6 +128,10 @@
       text-align: right;
       padding-right: 55px;
 
+      &:before {
+        right: -70px;
+      }
+      
       .footer__nav--img {
         right: 0;
       }
@@ -67,6 +140,7 @@
     &--img {
       position: absolute;
       bottom: 0;
+      z-index: 2;
 
       img {
         display: block;
