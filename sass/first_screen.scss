@@ -10,6 +10,10 @@ html {
 body {
   font: 14px/1.2 $GothamPro;
   color: $default_t_color;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .hide {

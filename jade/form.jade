@@ -1,0 +1,75 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('XO form')
+
+    body
+        .wrapper.wrapper--prod
+            .section__inner
+                .prod__order
+                    form(action='#')
+                        .prod__order--title 
+                            img(src='i/form_title.png')
+                        .prod__order--inner
+                            .prod__order--caption Оформить заказ
+                            
+                            .form__cell
+                                label.form__label.form__label--v3(for='order_name') Имя и фамилия
+                                .form__input--w
+                                    input#order_name.form__inp.form__inp--v2(placeholder='Ричард Хеннесси' value='Константин Константинопол')
+                                    
+                                .form__input--tip В магазине менеджер спросит имя и фамилию, чтобы отдать заказ 
+                            .form__cell
+                                label.form__label.form__label--v3(for='order_phone') Контактный телефон
+                                .form__input--w
+                                    input#order_phone.form__inp.form__inp--v2(placeholder='+7 999 99 99' value='+7 923 311 31 11')
+                                    
+                                .form__input--tip По этому номеру позвонит менеджер, чтобы подтвердить заказ
+                                    
+                            .form__cell
+                                label.form__label.form__label--v3(for='order_email') Эл. почта
+                                .form__input--w
+                                    input#order_email.form__inp.form__inp--v2(placeholder='example@mail.ru' value='konstantin.konstantinopolsy@')
+                                    
+                                .form__input--tip На эту почту отправим письмо с деталями заказа
+                                    
+                            .moreBlock.more__info.more__info--v1
+                                a.link--inner.link--collapse.moreBtn(href='#') Как забрать и оплатить
+                                
+                                .moreText
+                                    p Продавать алкоголь через сайт запрещено законодательством России.
+                                    p Поэтому оплатить и забрать заказ можно в официальном магазине в ЦУМе по адресу: 
+                                        a.link--external.link--collapse(href='#') ул. Петровка, 2
+                                        
+                            .moreBlock.more__info
+                                a.link--inner.link--collapse.moreBtn(href='#')
+                                    span.link__text--vis Забыли, что заказали
+                                    span.link__text--hid Вы выбрали
+                                
+                                .moreText
+                                    dl.prod__order--list
+                                        dt X.O
+                                        dd 3
+                                        dt Paradis
+                                        dd 1
+                                        dt Richard 
+                                        dd 1
+                                        
+                            .more__info.more__info--v2
+                                .prod__gift
+                                    label.check__emul--v1
+                                        input.hidden__inp(type='checkbox')
+                                        span.check__emul--text
+
+                                    span.mb.text--left Хочу получать информацию по мероприятиям, специальным акциям и предложениям
+                                        
+                            .more__info.more__info--v2
+                                .prod__order--total 249 372 ₽
+                                        
+                        .prod__order--controls
+                            button.prod__order--btn.btn--v1 ЗАКАЗАТЬ
+                            p или 
+                                a.link--external.link--collapse(href='#') продолжить покупки
+                            
+
+        +scripts()

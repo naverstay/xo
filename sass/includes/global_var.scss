@@ -11,6 +11,7 @@ $icomoon-font-name: 'xo_icons';
 $GothamPro: 'GothamPro', sans-serif;
 $GothamProLight: 'GothamProLight', sans-serif;
 $GothamProMedium: 'GothamProMedium', sans-serif;
+$GothamProBold: 'GothamProBold', sans-serif;
 
 $CormorantBold: 'CormorantBold', sans-serif;
 $CormorantBoldItalic: 'CormorantBoldItalic', sans-serif;
@@ -39,7 +40,7 @@ $cross_font_TrebuchetMS: 'Trebuchet MS', 'Helvetica CY', sans-serif;
 $cross_font_Verdana: Verdana, 'Geneva CY', 'DejaVu Sans', sans-serif;
 
 $default_t_color: #7f7f7f;
-$placeholder_color: #ccc;
+$placeholder_color: #B0B8BD;
 
 @mixin opacity($val : 1, $important : 0) {
   @if $important == 0 {

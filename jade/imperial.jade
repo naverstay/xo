@@ -1,12 +1,12 @@
 include mixins.pug
 doctype html
 html(lang='ru')
-    +dev_head('XO')
+    +dev_head('XO imperial')
 
     body
         .wrapper.wrapper--prod
             .prod__holder
-                .prod__bg.prod__bg--xo
+                .prod__bg.prod__bg--imperial
                 .section__inner
                     ul.prod__age
                         li: a(href='imperial.html') IV
@@ -14,10 +14,13 @@ html(lang='ru')
                         li.prod__age--active: a(href='xo.html') I
                         li.prod__age--pre: a(href='xo-ltd.html') II
                         li: a(href='paradis.html') III
-                    .prod__name X.O
+                    .prod__name 
+                        span.mob--hidden PARADIS 
+                        | 
+                        span IMPERIAL
                         
                     .prod__picture
-                        img.reflectMe.prod__image(src='i/main-xo.png')
+                        img.reflectMe.prod__image(src='i/main-imperial.png')
                     
                     .prod__controls
                         a.prod__btn.prod__btn--prev(href='#')
@@ -81,17 +84,20 @@ html(lang='ru')
 
                     .prod__info--desription.mob--hidden.historyCollapseBlock
                         .prod__info--text
-                            h3 Рождение легенды
-                            p Создан в 1870 году Морисом Хеннесси для своих друзей,  как первый коньяк с указанием возраста eXtra Оld cognac на лицевой этикетке бутылки. В ассамбляж входит более 100 коньячных спиртов, возрастом от 20 до 30 лет. В 1947 году для коньяка была создана специальная бутылка, украшенная орнаментом из виноградной лозы.
+                            h3 Рождение 
+                            p Вдохновленный легендой об уникальном коньяке, созданном для императора Александра I, мастер погреба Дома Hennessy создал коньяк Paradis Impérial. Купаж состоит из коньячных спиртов возраста от 30 до 130 лет и содержит более значительную долю коньяков из запасов 19 века, чем коньяк Hennessy Paradis. Поэтому дегустировать его рекомендуется медленно.
 
-                            h3 Аромат
-                            p Купаж получен из вин земель  Гран Шампань (Grande Champagne), Пти Шампань (Petite Champagne), Бордери (Borderies) и Фин Буа (Fin Bois). Обладает богатым и устойчивым вкусом, ароматом спелых фруктов — грушы, персика, сливы, а также душистых пряностей — ванили и корицы, что придаёт напитку своеобразный вкус.
-                                
+                            h3 Вкус
+                            p Светло-янтарным с нежным, едва заметным зеленоватым отливом цветом напиток обязан потрясающему составу. Для его изготовления были отобраны самые исключительные коньячные спирты с самой изысканной текстурой. А долгие годы выдержки обеспечивают коньяку замысловатость и сбалансированность, которую можно достичь только благодаря длительному созреванию.
+                            
+                            h3 Вихрь ароматов
+                            p Букет раскрывается свежестью первых летних цветов — весенние запахи, жасмин и цветок апельсина кружатся вихрем, образуя поразительно насыщенную композицию. Во вкусе цветочные ноты возвращаются и звучат лейтмотивом, постоянно открывая новые тональности. 
+                            
                         p
                             a.link--inner.link--collapse.historyCollapseBtn(href='#')
                                 span.link__text--vis Показать историю целиком
                                 span.link__text--hid Скрыть историю
-                                
+
             .prod__slider--w
                 .section__inner
                     .prod__logo
@@ -104,10 +110,8 @@ html(lang='ru')
                                     span Рождение легенды
                                 .prod__tip Создан в 1870 году Морисом Хеннесси для своих друзей, как первый коньяк с указанием возраста eXtra Оld cognac на лицевой этикетке бутылки. В ассамбляж входит более 100 коньячных спиртов, возрастом от 20 до 30 лет. В 1947 году для коньяка была создана специальная бутылка, украшенная орнаментом из виноградной лозы.
     
-                                .text--center
-                                    a.link--inner.link--collapse.historyCollapseBtn(href='#')
-                                        span.link__text--vis Показать историю целиком
-                                        span.link__text--hid Скрыть историю
+                                .text--center.prod__history--controls
+                                    a.link--inner.link--collapse.historyCollapseBtn(href='#') Показать историю целиком
                                     
                             //-.prod__slider--controls
                                 a.prod__btn.prod__btn--prev(href='#')
@@ -121,8 +125,8 @@ html(lang='ru')
                         
                     .prod__slider
                         .prod__slider--img
-                            img.mob--hidden(src='i/slide_xo.png')
-                            img.dt--hidden(src='i/slide_xo_m.png')
+                            img.mob--hidden(src='i/slide_imperial.png')
+                            img.dt--hidden(src='i/slide_imperial_m.png')
 
                         .prod__slider--controls
                             a.prod__btn.prod__btn--prev(href='#')
@@ -135,15 +139,7 @@ html(lang='ru')
                             
                     .text--center
                         a.link--inner.link--goback(href='#') Вернуться наверх
-                    
-                    .prod__title.mob--it
-                        span Каждая капля Hennessy X.O <br> – это целое путешествие
                         
-                    .prod__tip Hennessy представляет новую рекламную кампанию, <br> основанную на фильме-путешествии <br> Николаса Виндинга Рефна.
-                        
-                    .prod__video
-                        img(src='i/video.jpg')
-
             .footer
                 .footer__nav.dt--hidden
                     a.footer__nav--btn.footer__nav--prev(href='#')

@@ -6,6 +6,14 @@
     max-width: 100%;
   }
 
+  &.logo--thanks {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: -27px;
+    position: relative;
+    z-index: 1;
+  }
+
   &.logo--start {
     display: inline-block;
     vertical-align: middle;
@@ -35,6 +43,19 @@
 
 .form {
 
+  &__input {
+    &--w {
+      position: relative;
+    }
+
+    &--tip {
+      color: #9b9b9b;
+      font: 12px/14px $GothamProLight;
+      margin: 13px 0;
+    }
+
+  }
+  
   &__row {
     @extend %clearfix;
 
@@ -130,6 +151,12 @@
         font-size: 28px;
       }
     }
+
+    &--v3 {
+      color: #bf9e59;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
   }
 
   &__w {
@@ -140,6 +167,7 @@
       .form__inp--v1 {
         width: 220px;
         margin: 0 auto;
+        border-radius: 0;
       }
 
       @include respond-to-min($resp_step_2) {
@@ -161,6 +189,17 @@
 
       @include respond-to-min($resp_step_2) {
         font-size: 28px;
+      }
+    }
+
+    &--v2 {
+      color: rgba(0, 0, 0, .74);
+      font: 16px $GothamPro;
+      padding: 5px 0;
+      border-bottom: 1px solid #b0b8bd;
+
+      &:focus {
+        border-color: #bf9e59;
       }
     }
 
@@ -241,18 +280,59 @@
       left: 50%;
       margin-left: -485px;
       top: 0;
-
-      /* Mask: */
-      background: #931403;
-      background: -moz-radial-gradient(center, ellipse cover, #931403 0%, #000 50%, #000 100%);
-      background: -webkit-radial-gradient(center, ellipse cover, #931403 0%, #000 50%, #000 100%);
-      background: radial-gradient(ellipse at center, #931403 0%, #000 50%, #000 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#931403', endColorstr='#000000', GradientType=1);
-
-      /* Mask: */
-      //background-image: radial-gradient(50% 205%, #931403 100%, #000 100%);
     }
 
+    &--xo {
+      &:before {
+        /* Mask: */
+        background: #931403;
+        background: -moz-radial-gradient(center, ellipse cover, #931403 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #931403 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #931403 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#931403', endColorstr='#000000', GradientType=1);
+      }
+    }
+
+    &--xo__ltd {
+      &:before {
+        background: #e5e5e5;
+        background: -moz-radial-gradient(center, ellipse cover, #e5e5e5 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #e5e5e5 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #e5e5e5 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#000000', GradientType=1);
+      }
+    }
+
+    &--paradis {
+      &:before {
+        background: #a8041b;
+        background: -moz-radial-gradient(center, ellipse cover, #a8041b 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #a8041b 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #a8041b 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8041b', endColorstr='#000000', GradientType=1);
+      }
+    }
+
+    &--imperial {
+      &:before {
+        background: #e85100;
+        background: -moz-radial-gradient(center, ellipse cover, #e85100 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #e85100 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #e85100 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e85100', endColorstr='#000000', GradientType=1);
+      }
+    }
+
+    &--richard {
+      &:before {
+        background: #d93006;
+        background: -moz-radial-gradient(center, ellipse cover, #d93006 0%, #000 50%, #000 100%);
+        background: -webkit-radial-gradient(center, ellipse cover, #d93006 0%, #000 50%, #000 100%);
+        background: radial-gradient(ellipse at center, #d93006 0%, #000 50%, #000 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d93006', endColorstr='#000000', GradientType=1);
+      }
+    }
+    
     @include respond-to-min($resp_step_2) {
       &:after {
         height: 95px;
@@ -327,27 +407,35 @@
     @extend %clearfix;
     text-align: center;
     margin: 0 auto 23px;
-    max-width: 290px;
+    //max-width: 290px;
+    font-size: 0;
+    line-height: 36px;
+    //white-space: nowrap;
 
     > li {
-      float: left;
-      width: 20%;
-      color: #bf9e59;
-      font: 26px/36px $CormorantRegular;
+      display: inline-block;
 
-      span {
+      a {
         display: inline-block;
         vertical-align: middle;
-        line-height: 1;
+        color: #bf9e59;
+        text-decoration: none;
+        letter-spacing: 1px;
+        padding: 0 40px;
+        font: 22px/36px $CormorantRegular;
       }
 
-      &.prod__age--active span {
+      &.prod__age--pre a {
+        font-size: 28px;
+      }
+
+      &.prod__age--active a {
         font-size: 32px;
       }
     }
 
     @include respond-to-min($resp_step_2) {
-      max-width: 490px;
+      //max-width: 490px;
       margin-bottom: 25px;
     }
   }
@@ -356,10 +444,24 @@
     color: #fff;
     font: 40px/1 $CormorantBold;
     margin-bottom: 35px;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
+    position: relative;
 
+    &--edition {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      font: 20px/1 $CormorantItalic;
+      letter-spacing: 0;
+    }
+    
     @include respond-to-min($resp_step_2) {
       font-size: 56px;
+
+      &--edition {
+        font-size: 22px;
+      }
     }
   }
 
@@ -388,6 +490,7 @@
     &--pagination {
       text-align: center;
       margin-bottom: 30px;
+      opacity: .75;
 
       li {
         cursor: pointer;
@@ -440,7 +543,7 @@
 
     &--w {
       background: #030204;
-      padding: 45px 0 1px;
+      padding: 45px 0;
       margin-top: 70px;
       position: relative;
 
@@ -494,7 +597,7 @@
         margin-top: 25px;
 
         &:first-child {
-          margin-top: -10px;
+          margin-top: -5px;
         }
       }
 
@@ -510,6 +613,34 @@
         padding-right: 130px;
       }
     }
+
+    &--text {
+      position: relative;
+      max-height: 22.7em;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 70%;
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+      }
+
+      .history--opened & {
+        max-height: none;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+    
   }
 
   &__price {
@@ -566,7 +697,13 @@
     text-align: center;
     line-height: 18px;
     margin-bottom: 20px;
+    color: rgba(0, 0, 0, .74);
+    white-space: nowrap;
 
+    span {
+      white-space: normal;
+    }
+    
     @include respond-to-min($resp_step_2) {
       line-height: 22px;
       font-size: 16px;
@@ -590,7 +727,7 @@
         position: absolute;
         top: 50%;
         width: 100%;
-        border-top: 1px solid #424142;
+        border-top: 1px solid rgba(255, 255, 255, .2);
       }
 
       &:before {
@@ -682,7 +819,7 @@
     &.history--opened {
 
       .prod__history--controls {
-        display: none;
+        //display: none;
       }
 
       .prod__tip {
@@ -693,7 +830,131 @@
         }
       }
     }
-  }  
+  }
+
+  &__order {
+    margin: 0 auto;
+    max-width: 264px;
+    width: 100%;
+    padding: 20px 0;
+
+    @include respond-to-min($resp_step_2) {
+      max-width: 340px;
+    }
+
+    &--title {
+      text-align: center;
+      margin-bottom: 20px;
+
+      img {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+      }
+
+    }
+
+    &--caption {
+      text-align: center;
+      font: 20px $GothamPro;
+      color: rgba(0, 0, 0, .74);
+      margin-bottom: 27px;
+
+      @include respond-to-min($resp_step_2) {
+        font-size: 24px;
+      }
+    }
+
+    &--inner {
+      padding: 26px 20px 28px;
+      border: 7px solid rgba(176, 184, 189, .2);
+
+      @include respond-to-min($resp_step_2) {
+        padding: 23px 43px 28px;
+      }
+
+      .form__cell {
+        margin-bottom: 27px;
+      }
+    }
+
+    &--thanks {
+      padding: 42px 13px 35px;
+      border: 7px solid #bf9e59;
+      text-align: center;
+      color: #000;
+
+      @include respond-to-min($resp_step_2) {
+        padding: 42px 43px 35px;
+      }
+
+      &__caption {
+        font: 28px/33px $GothamProBold;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font: 22px/26px $CormorantRegular;
+        margin-top: 15px;
+
+        @include respond-to-min($resp_step_2) {
+          font-size: 24px;
+        }
+      }
+    }
+
+    &--total {
+      text-align: center;
+      font-size: 28px;
+      color: rgba(0, 0, 0, .74);
+    }
+
+    &--controls {
+      margin-top: -30px;
+      margin-bottom: 30px;
+      padding: 0 16px;
+      text-align: center;
+
+      p {
+        margin-top: 12px;
+      }
+
+      p, a {
+        font-size: 12px;
+      }
+
+      @include respond-to-min($resp_step_2) {
+        padding: 0 30px;
+      }
+    }
+
+    &--btn {
+      width: 100%;
+      display: block;
+    }
+
+    &--list {
+      @extend %clearfix;
+      font: 12px $GothamProLight;
+      color: rgba(0, 0, 0, .74);
+      padding-top: 3px;
+
+      dt, dd {
+        float: left;
+        margin-bottom: 5px;
+        margin-top: 9px;
+      }
+
+      dt {
+        clear: both;
+        width: 40%;
+      }
+
+      dd {
+        max-width: 60%;
+      }
+    }
+  }
 }
 
 .check__emul {
@@ -726,6 +987,7 @@
 
     .hidden__inp:checked + .check__emul--text {
       &:before {
+        border-color: #bf9e59;
         background: #bf9e59;
         content: $i-check;
       }
@@ -738,6 +1000,18 @@
     text-decoration: none;
     color: rgba(0, 0, 0, .74);
     border-bottom: 1px dashed rgba(191, 158, 89, .4);
+    padding-bottom: 2px;
+    
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  &--external {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .74);
+    border-bottom: 1px solid rgba(191, 158, 89, .4);
+    padding-bottom: 2px;
 
     &:hover {
       border-color: transparent;
@@ -747,6 +1021,7 @@
   &--goback {
     color: #bf9e59;
     font-size: 14px;
+    opacity: .75;
 
     @include respond-to-min($resp_step_2) {
       font-size: 16px;
@@ -757,15 +1032,64 @@
     font-size: 14px;
     color: #bf9e59;
   }
+
+  &__text {
+
+    &--hid {
+      display: none;
+
+      .history--opened & {
+        display: initial;
+      }
+    }
+
+    &--vis {
+
+      .history--opened & {
+        display: none;
+      }
+    }
+  }
 }
 
+.more__info {
+  margin-bottom: 20px;
+
+  &.history--opened {
+    margin-bottom: 30px;
+  }
+
+  &.more__info--v1 {
+    margin-top: 35px;
+  }
+
+  &.more__info--v2 {
+    margin-top: 44px;
+  }
+
+  p {
+    margin-top: 11px;
+  }
+
+  .mb {
+    line-height: 1.2;
+  }
+
+  p, a, span {
+    font-size: 12px;
+  }
+
+  &.history--opened {
+    .link--inner {
+      color: rgba(0, 0, 0, .74);
+      border-color: transparent;
+    }
+  }
+}
+
+.moreText,
 .collapseForm {
   display: none;
-
-  @include respond-to-min($resp_step_2) {
-    display: block !important;
-    height: 100% !important;
-  }
 }
 
 .order__form {
@@ -773,11 +1097,11 @@
   max-width: 266px;
   margin: 0 auto 50px;
   position: relative;
-  padding-top: 23px;
+  padding-top: 24px;
   //padding: 23px 10px 0;
 
   @include respond-to-min($resp_step_2) {
-    padding-top: 20px;
+    //padding-top: 20px;
     //padding: 20px 52px 0;
     max-width: 340px;
   }
@@ -795,6 +1119,7 @@
   &--caption {
     text-align: center;
     font-size: 15px;
+    line-height: 17px;
     letter-spacing: 1.13px;
     padding-bottom: 20px;
     position: relative;
@@ -810,7 +1135,7 @@
     }
     
     @include respond-to-min($resp_step_2) {
-      padding-bottom: 23px;
+      padding-bottom: 24px;
       //margin-bottom: 23px;
       font-size: 17px;
 
@@ -828,7 +1153,7 @@
 
   &--total {
     @extend %clearfix;
-    margin: 32px 0 10px;
+    margin: 28px 0 8px;
   }
 
   &--cell {
@@ -836,6 +1161,10 @@
 
     &:first-child {
       float: left;
+    }
+
+    &.total {
+      font-size: 16px;
     }
   }
 
@@ -845,7 +1174,6 @@
     width: 100%;
     left: 0;
   }
-
 }
 
 .order__name {

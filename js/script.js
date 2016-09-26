@@ -34,7 +34,13 @@ $(function ($) {
 
     $('.historyCollapseBtn').on ('click', function () {
 
-        $(this).closest('.historyCollapseBlock').addClass('history--opened');
+        $(this).closest('.historyCollapseBlock').toggleClass('history--opened');
+
+        return false;
+    });
+
+    $('.moreBtn').on ('click', function () {
+        $(this).closest('.moreBlock').toggleClass('history--opened').find('.moreText').slideToggle();
 
         return false;
     });

@@ -6,14 +6,14 @@ html(lang='ru')
     body
         .wrapper.wrapper--prod
             .prod__holder
-                .prod__bg
+                .prod__bg.prod__bg--xo__ltd
                 .section__inner
                     ul.prod__age
-                        li: span IV
-                        li: span V
-                        li.prod__age--active: span I
-                        li: span II
-                        li: span III
+                        li: a(href='imperial.html') IV
+                        li.prod__age--pre: a(href='richard.html') V
+                        li.prod__age--active: a(href='xo.html') I
+                        li.prod__age--pre: a(href='xo-ltd.html') II
+                        li: a(href='paradis.html') III
                     .mob--hidden
                         .prod__name X.O LIMITED EDITION
                             .prod__name--edition From Tom Dixon
@@ -22,7 +22,7 @@ html(lang='ru')
                             .prod__name--edition Limited Edition From Tom Dixon
                         
                     .prod__picture
-                        img.reflectMe.prod__image(src='i/main-xo.png')
+                        img.reflectMe.prod__image(src='i/main-xo_letd.png')
                     
                     .prod__controls
                         a.prod__btn.prod__btn--prev(href='#')
@@ -80,18 +80,22 @@ html(lang='ru')
                                     .order__form--total
                                         .order__form--cell
                                             .order__total Итого
-                                        .order__form--cell 249 372 ₽
+                                        .order__form--cell.total 249 372 ₽
                                             
                                     button.order__form--btn.btn--v1 ОФОРМИТЬ
 
-                    .prod__info--desription.mob--hidden
-                        h3 Рождение легенды
-                        p Создан в 1870 году Морисом Хеннесси для своих друзей,  как первый коньяк с указанием возраста eXtra Оld cognac на лицевой этикетке бутылки. В ассамбляж входит более 100 коньячных спиртов, возрастом от 20 до 30 лет. В 1947 году для коньяка была создана специальная бутылка, украшенная орнаментом из виноградной лозы.
-                        
-                        h3 Аромат
-                        p Купаж получен из вин земель  Гран Шампань (Grande Champagne), Пти Шампань (Petite Champagne), Бордери (Borderies) и Фин Буа (Fin Bois). Обладает богатым и устойчивым вкусом, ароматом спелых фруктов — грушы, персика, сливы, а также душистых пряностей — ванили и корицы, что придаёт напитку своеобразный вкус.
+                    .prod__info--desription.mob--hidden.historyCollapseBlock
+                        .prod__info--text
+                            h3 Том Диксон
+                            p Дизайн декантера новой лимитированной серии Hennessy X.O создал известный британский дизайнер Том Диксон — обладатель множества наград, Ордена Британской Империи. Его работы представлены в постоянной экспозиции известных мировых музеев: Музей Виктории и Альберта в Лондоне, Музеях современного искусства в Нью-Йорке и Токио, в парижском Центре Помпиду.
+
+                            h3 Ювелирное изделие
+                            p «Меня завораживают предметы роскоши и то, как они позиционируются в разных контекстах», — говорит Том Диксон, замечая, что адекватное оформление необходимо для правильного восприятия ценности предмета. Неподражаемый стиль дизайнерских работ маэстро и роскошный характер коньяка отражены в граненом декантере Hennessy X.O от Тома Диксона. Новый предмет коллекционирования выглядит как ювелирное изделие. Словно элементы мозаики более, чем 100 видов коньячных спиртов, входящих в состав купажа Hennessy X.O, превратились в ослепляющий взгляд предмет роскоши.
+
                         p
-                            a.link--inner.link--collapse(href='#') Скрыть историю
+                            a.link--inner.link--collapse.historyCollapseBtn(href='#')
+                                span.link__text--vis Показать историю целиком
+                                span.link__text--hid Скрыть историю
 
             .prod__slider--w
                 .section__inner
@@ -120,8 +124,8 @@ html(lang='ru')
                         
                     .prod__slider
                         .prod__slider--img
-                            img.mob--hidden(src='i/slide_xo.png')
-                            img.dt--hidden(src='i/slide_xo_m.png')
+                            img.mob--hidden(src='i/slide_xo_ltd.png')
+                            img.dt--hidden(src='i/slide_xo_ltd_m.png')
 
                         .prod__slider--controls
                             a.prod__btn.prod__btn--prev(href='#')
@@ -134,30 +138,20 @@ html(lang='ru')
                             
                     .text--center
                         a.link--inner.link--goback(href='#') Вернуться наверх
-                    
-                    .prod__title.mob--it
-                        span Каждая капля Hennessy X.O <br> – это целое путешествие
                         
-                    .prod__tip Hennessy представляет новую рекламную кампанию, <br> основанную на фильме-путешествии <br> Николаса Виндинга Рефна.
-                        
-                    .prod__video
-                        img(src='i/video.jpg')
-
             .footer
                 .footer__nav.dt--hidden
                     a.footer__nav--btn.footer__nav--prev(href='xo.html')
                         .footer__nav--img
                             img(src='i/footer_nav_1.png')
-                        .footer__nav--age V 
-                        .footer__nav--name RICHARD
+                        .footer__nav--age I
+                        .footer__nav--name X.O
                     
                     a.footer__nav--btn.footer__nav--next(href='xo-ltd.html')
                         .footer__nav--img
                             img(src='i/footer_nav_2.png')
-                        .footer__nav--age II
-                        .footer__nav--name X.O
-                        .footer__nav--tip LIMITED EDITION <br> FROM TOM DIXON
-                            
+                        .footer__nav--age III
+                        .footer__nav--name PARADIS
                             
                 .section__inner
                     .copyright ©2016 Hennessy

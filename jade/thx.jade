@@ -1,0 +1,17 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('XO thanks')
+
+    body
+        .wrapper.wrapper--prod
+            .section__inner
+                .prod__order
+                    form(action='#')
+                        .text--center: .logo--thanks.logo
+                            img(src='i/logo_black.svg')
+                        .prod__order--thanks
+                            .prod__order--thanks__caption Спасибо,  <br> до встречи <br>  в ЦУМе
+                            p Вам отправили письмо с&nbsp;деталями заказа. 
+
+                            p Также сегодня с вами свяжется менеджер для подтверждения  <br>  заявки. 
