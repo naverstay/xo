@@ -800,15 +800,15 @@ $placeholder_color: #B0B8BD;
 }
 
 @mixin keyframe_sub($animation_name) {
-  @-webkit-keyframes $animation_name {
+  @-webkit-keyframes #{$animation_name} {
     @content;
   }
 
-  @-moz-keyframes $animation_name {
+  @-moz-keyframes #{$animation_name} {
     @content;
   }
 
-  @keyframes $animation_name {
+  @keyframes #{$animation_name} {
     @content;
   }
 }
